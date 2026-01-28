@@ -53,11 +53,10 @@ def search_year():
 # search_title(title)
 def search_title():
         title = input("Which title would you like to search for? ")
-
         print(f"All games with title {title}:")
         for name in games:
              if name == title:
-                  print(f" {name}")
+                  print(f"{name} by", games[title])
 
 
 # Welcome message
