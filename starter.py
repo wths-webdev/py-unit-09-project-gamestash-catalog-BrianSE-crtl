@@ -15,17 +15,25 @@ def get_inventory_count():
     
 
 # add_game(title, year): Adds a game to the inventory.
-def add_game():
-        print("What game would you like to add?")
-        title = input("Title: ")
-        year = input("Year released: ")
+def add_game(title, year):
         games.update({title: year})
 
+        
+def adding():
+    print("What game would you like to add?")
+    title = input("Title: ")
+    year = input("Year released: ")
+    add_game(title, year)
+
 # remove_game(title): Removes a game from the inventory.
-def remove_game():
-        game = input("What title would you like to remove? ")
+def remove_game(game):
         games.pop(game)
-        print(game + " was removed successfully.")
+
+def removal():
+    game = input("What title would you like to remove? ")
+    print(game + " was removed successfully.")
+    remove_game(game)
+
 
 
 # display_inventory()
@@ -85,11 +93,11 @@ while True:
 
     # Use conditional statements to call functions based on user input
     if user_selection == "add":
-        add_game()
+        adding()
 
     
     elif user_selection == "remove":
-        remove_game()
+        removal()
     
     elif user_selection == "show":
         display_inventory()
