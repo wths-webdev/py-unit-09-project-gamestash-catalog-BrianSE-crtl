@@ -50,7 +50,7 @@ def display_inventory():
 
 
 # search_year(year)
-def search_year():
+def search_year(year):
         year = int(input("Which year would you like to seach for? "))
 
         print(f"All games from {year}:")
@@ -59,7 +59,7 @@ def search_year():
                 print(f"{game}")
 
 # search_title(title)
-def search_title():
+def search_title(title):
         title = input("Which title would you like to search for? ")
         print(f"All games with title {title}:")
         for name in games:
@@ -93,7 +93,7 @@ while True:
 
     # Use conditional statements to call functions based on user input
     if user_selection == "add":
-        adding()
+        add_game()
 
     
     elif user_selection == "remove":
